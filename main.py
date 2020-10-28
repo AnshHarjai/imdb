@@ -1,16 +1,8 @@
-arr = ['hello', 'world',]
-txt = ''
-for i in arr:
-    for j in range(len(i)):
-        if j == 0:
-            txt += str(ord(i[j]))
-        else:
-            txt += i[-j]
-            print(j)
-    txt += ' '
-new = ''
+import imdb
 
-# 65 119esi 111dl 111lw 108devi 105n 97n 111ka
-# 65 119esi 111dl 111lw 108dvei 105n 97n 111ka
-
-print(txt)
+inpt = 'y'
+while inpt == 'y' or inpt == 'Y':
+    title = input('Enter name of movie or tv show: ')
+    print(imdb.content_advisory(title))
+    print('*' * 200)
+    inpt = input('Do you wish to continue(y/n)? ')
